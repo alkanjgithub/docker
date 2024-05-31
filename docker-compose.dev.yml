@@ -1,0 +1,17 @@
+version: "3"
+services:
+ nodeapp:
+   container_name: express-node-development
+   build:
+    context: .
+    target: development
+    # ---
+    # args:
+    # - NODE_ENV=development
+     # ---
+   volumes:
+     - ./volums:/app/volums:ro
+    
+   environment: 
+     - NODE_ENV=development 
+   command: npm run start-dev
