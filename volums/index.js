@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const redis=require('redis');
+const os=require('os');
 
 // init app
 const PORT = process.env.PORT || 5000;
@@ -31,6 +32,7 @@ mongoose.connect(URI).then(() => console.log('connect to db ...')).catch((err) =
 
 app.get('/',(req,res) => { 
     redisClient.set('name','TALLAL');
+    console.log(`traffic from ${os.hostname}`);
     res.send(`<p style="font-size:100px">&#128540;</p>
               <h1> Hallo Mostafa &#128540;</h1>
 	    `)});

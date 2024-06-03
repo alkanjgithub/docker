@@ -1,7 +1,7 @@
 version: "3"
 services:
  nodeapp:
-   container_name: express-node-development
+ 
    build:
     context: .
     target: development
