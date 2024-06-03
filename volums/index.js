@@ -32,7 +32,7 @@ mongoose.connect(URI).then(() => console.log('connect to db ...')).catch((err) =
 app.get('/',(req,res) => { 
     redisClient.set('name','TALLAL');
     res.send(`<p style="font-size:100px">&#128540;</p>
-              <h1> Hallo Sahtoot &#128540;</h1>
+              <h1> Hallo Mostafa &#128540;</h1>
 	    `)});
 
     app.get('/data',async (req,res) => { 
